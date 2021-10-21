@@ -2,7 +2,7 @@
 
 1 - Vamos a su pagina oficial https://www.mongodb.com/try/download/community
 
-2 - Descargamos la version que nos recomienda para nuestro sistema operativo
+2 - Descargamos la version que nos recomienda para nuestro sistema operativo que sale por defecto
 
 ![image](https://user-images.githubusercontent.com/54609399/137845052-a1a0c6ec-913f-4b28-89f0-3cac27a843d2.png)
 
@@ -22,11 +22,11 @@
 
 ![image](https://user-images.githubusercontent.com/54609399/137845546-06837b3c-c625-40f0-bd99-645c489069eb.png)
 
-7 - no damos ninguna opcion y damos next
+7 - no damos ninguna opcion y damos next, porque esto es para generar contraseñas a las BD y si se nos olvida alguna esto generara conflictos como estara intaladas en nuestro pc por eso no necesitamos ponerles clave por eso dejamos por defecto y damos next.
 
 ![image](https://user-images.githubusercontent.com/54609399/137845609-4e451695-4360-41e3-830f-2aa80b024654.png)
 
-8 - dejamos checkeado compass y damos next
+8 - dejamos checkeado compass que es la parte grafica de MongoDB y damos next
 
 ![image](https://user-images.githubusercontent.com/54609399/137845670-e1a7f7ad-5fb0-4e46-8492-fade8320426c.png)
 
@@ -34,55 +34,70 @@
 
 ![image](https://user-images.githubusercontent.com/54609399/137845694-901ef5f6-7ca7-4274-84cf-7c4f92401149.png)
 
+Esperamos que termine el proceso
+
 ![image](https://user-images.githubusercontent.com/54609399/137845897-a7bd25f5-0bc1-4672-9c4b-373d3640bb0d.png)
 
 
-10 - si sale esto nos toca darle en close
+10 - si sale esto nos toca darle en close se debe cerrar todo lo que no deje instalar  (esto es porque tienen abierto algo que para mongo impide la ejecución)
 
 ![image](https://user-images.githubusercontent.com/54609399/137845784-2ef244ea-60c0-4f63-a8ee-46624f3b6a0b.png)
 
-deben cerrar todo
+Continuamos el proceso y nos pide reiniciar asi que reiniciamos la maquina
+
 ![image](https://user-images.githubusercontent.com/54609399/137845861-e3187bae-7383-47c4-8c98-7720d68f5a79.png)
 
 
-11 - continamos el proceso de instalacion
+11 - Volvemos del reinicio y continamos el proceso de instalacion
 
 ![image](https://user-images.githubusercontent.com/54609399/137845821-58c5010b-7008-49ba-91ac-64f1ac484da1.png)
 
+Una vez finalizado procedera abrir compass
 
 ![image](https://user-images.githubusercontent.com/54609399/137846155-7d13a039-8b77-482d-bf7c-28440d638b84.png)
 
+cerramos esos mensajes guias dandole la X a la ventanita secundaria de WELCOME TO MONGODB
+
 ![image](https://user-images.githubusercontent.com/54609399/137846195-8282fcec-c1f9-4e33-8779-a3ec531c13ee.png)
+
+Dejamos todas checkeadas y damos start
 
 ![image](https://user-images.githubusercontent.com/54609399/137846255-cdebdd6f-a2b0-4654-8e75-e04b00041fd6.png)
 
+ya nos queda listo el mongo compass
+
 ![image](https://user-images.githubusercontent.com/54609399/137846355-6ce7c86a-0040-451b-b70d-0ab8d3de246c.png)
 
-12 - En el disco local C creamos una carpeta Data
+12 - En el disco local C creamos una carpeta data (EN MINUSCULA TODA) aqui es donde mongo va guardar las bases de datos, los de linux y mac no deben crear esta carpeta
 
 ![image](https://user-images.githubusercontent.com/54609399/137846709-45d0ff77-6e79-4898-8532-46b530ac7703.png)
-![image](https://user-images.githubusercontent.com/54609399/137846749-586f5acd-b13d-4ec9-b966-b6fa2f909da7.png)
 
-14 - Dentro de data creamos una carpeta db
+14 - Dentro de data creamos una carpeta db (EN MINUSCULA Y DEBE SER DB NUNCA BD ) los d elinux y mac tampoco deben crear esta carpeta
 
 ![image](https://user-images.githubusercontent.com/54609399/137846792-4020f9cf-2855-46cc-b51a-046da36ca212.png)
 
 
-15 - vamos a la variable de entrono
+15 - vamos a la variable de entorno para que nuestro windows reconozca mongoDB y lo pueda ejecutar en su consola de comandos, los de linux y mac no necesitan este paso
 
-![image](https://user-images.githubusercontent.com/54609399/137846946-743df170-b594-48c3-a92d-c6300b3f57c1.png)
+para ello vamos al buscador y escribimos variables de entorno y seleccionamos la siguiente opcion
 
-
-![image](https://user-images.githubusercontent.com/54609399/137846986-9d82eede-5749-47ef-bfe9-620fc45a6f82.png)
-
+Editar variables de entorno del sistema
 
 ![image](https://user-images.githubusercontent.com/54609399/137847159-868dd2aa-9e84-4d30-84e6-81a4efaf4c57.png)
 
+damos clck en variables de entorno
+
 ![image](https://user-images.githubusercontent.com/54609399/137847209-77e0cd77-2dd3-44bd-bcd5-4bc429ade917.png)
 
-![image](https://user-images.githubusercontent.com/54609399/137847276-dbd95cb1-a920-4b9d-9f11-329c0ab507a6.png)
+damos click en el path del segundo cuadrito y damos en el boton editar
 
 ![image](https://user-images.githubusercontent.com/54609399/137847496-37d63466-69d6-461f-9e4d-ef36fceed559.png)
+
+nos abre esta ventanita pero todabia no vamos hacer nada aqui
+
+![image](https://user-images.githubusercontent.com/54609399/138189503-a06114bc-d13f-4ac0-9fa3-6ef769d4a678.png)
+
+vamos a ir a buscar una ruta , en el disco C buscamos donde quedo instalado mongo y entramos hasta la carpeta bin y copiamos la ruta en la barra de arriba
 
 ![image](https://user-images.githubusercontent.com/54609399/137847588-0b1c9e96-dbed-4f44-a7be-212fb47adf32.png)
 
