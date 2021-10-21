@@ -48,9 +48,11 @@ Continuamos el proceso y nos pide reiniciar asi que reiniciamos la maquina
 ![image](https://user-images.githubusercontent.com/54609399/137845861-e3187bae-7383-47c4-8c98-7720d68f5a79.png)
 
 
-11 - Volvemos del reinicio y continamos el proceso de instalacion
+11 - Podemos continuar con la instalacion
 
 ![image](https://user-images.githubusercontent.com/54609399/137845821-58c5010b-7008-49ba-91ac-64f1ac484da1.png)
+
+NOTA: NOS PUEDES PEDIR REINICIO DEL SISTEMA REINICIAMOS Y AL VOLVER CONTINUAMOS CON LO SIGUIENTE
 
 Una vez finalizado procedera abrir compass
 
