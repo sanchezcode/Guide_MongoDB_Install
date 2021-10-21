@@ -101,17 +101,36 @@ vamos a ir a buscar una ruta , en el disco C buscamos donde quedo instalado mong
 
 ![image](https://user-images.githubusercontent.com/54609399/137847588-0b1c9e96-dbed-4f44-a7be-212fb47adf32.png)
 
+Volvemos a la ventanita donde no hicimos nada y damos al boton nuevo y ponemos la nueva ruta y damos aceptar
+
 ![image](https://user-images.githubusercontent.com/54609399/137847646-e8ab4d3e-a4b1-4020-91d0-8c32b1d9c395.png)
+
+Luego nos lleva a esta ventanita de nuevo y damos aceptar
 
 ![image](https://user-images.githubusercontent.com/54609399/137847675-ae5bccb7-0b1c-4340-8426-79494980296d.png)
 
+nos devuelve a esta ventana y le damos en aceptar tambien
+
 ![image](https://user-images.githubusercontent.com/54609399/137847706-fe97f411-8d29-4f4b-bfad-c915886ba9d3.png)
+
+Volvemos a la carpetica donde esta instalado mongo y vamos a la carpeta bin
+
+
+y ejecutamos el archivo mongod (demonio de mongo) esto ejecuta el servidor de mongo (los de linux y mac abren una consola y ejecutan la palabra mongod y ya se ejecuta el servidor no tiene consola propia de mongo)
 
 ![image](https://user-images.githubusercontent.com/54609399/137847911-27250942-6ffc-404f-b2c2-864db5f8308b.png)
 
+
+luego de que tenemos el servidor ejecutando abrimos la consola mongo que es el cliente donde podemos trabajar (los de linux y mac tienen que abrir otra consola a aprte y escribir mongo ejecutarlo y ya tienen el cliente tampoco tienen consola propoa de mongo)
+
 ![image](https://user-images.githubusercontent.com/54609399/137848011-0bc0d307-84fb-454f-94b8-b72a62c49f26.png)
 
+con esto ya tenemos instalado mongo en el equipo tambien podemos comporbar la version de mongo abriendo otra consola del sistema
+y colocando mongo --version
+
 ![image](https://user-images.githubusercontent.com/54609399/137848080-ede1ca18-684c-42d5-9339-3ceb0347dc39.png)
+
+
 
 
 
