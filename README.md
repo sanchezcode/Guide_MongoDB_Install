@@ -30,7 +30,7 @@
 
 ![image](https://user-images.githubusercontent.com/54609399/137845670-e1a7f7ad-5fb0-4e46-8492-fade8320426c.png)
 
-9 - damos install
+9 - damos install 
 
 ![image](https://user-images.githubusercontent.com/54609399/137845694-901ef5f6-7ca7-4274-84cf-7c4f92401149.png)
 
