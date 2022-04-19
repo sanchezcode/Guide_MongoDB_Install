@@ -1,4 +1,4 @@
-# Guide_MongoDB
+# Guide_MongoDB_Install
 
 1 - Vamos a su pagina oficial https://www.mongodb.com/try/download/community
 
@@ -131,6 +131,155 @@ con esto ya tenemos instalado mongo en el equipo tambien podemos comporbar la ve
 y colocando mongo --version
 
 ![image](https://user-images.githubusercontent.com/54609399/137848080-ede1ca18-684c-42d5-9339-3ceb0347dc39.png)
+
+**** Linux Install****
+
+1 - Entramos a la pagina guía de instalación de MongoDB
+
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+2 - Nos ubicamos en la sección de linux Ubuntu
+
+![image](https://user-images.githubusercontent.com/54609399/164111442-da9ba0c8-fa7c-4e42-872f-f672c8b939bc.png)
+
+3 - Copiamos la siguiente linea de código
+
+![image](https://user-images.githubusercontent.com/54609399/164111602-f92eb648-56c6-4ad9-9d4b-afae44bdadf1.png)
+
+```
+sudo wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+
+![image](https://user-images.githubusercontent.com/54609399/164111916-a668dca1-0b70-4f84-b12c-81379874195b.png)
+
+Ejecutamos el siguiente comando con ENTER y esperamos un OK
+
+![image](https://user-images.githubusercontent.com/54609399/164112517-5eb7bfe4-fee1-48d1-ad7d-51e365d70b87.png)
+
+
+4 - Ejecutamos los siguientes comandos:
+
+```
+sudo apt-get install gnupg
+```
+```
+sudo wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+![image](https://user-images.githubusercontent.com/54609399/164112431-d60ba669-bec2-48b7-8c04-f260c642400d.png)
+
+5 - Realizamos el siguiente comando y luego hacemos un update para recargar todos los paquetes de MongoDb instalados hasta el momento
+
+```
+sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+![image](https://user-images.githubusercontent.com/54609399/164112957-666de04a-6f2b-4578-81da-f890b490228c.png)
+
+```
+sudo apt-get update
+```
+
+6 - Ahora vamos a instalar la ultima versión actual de MongoDB
+
+```
+sudo apt-get install -y mongodb-org
+```
+
+Al terminar ejecutamos la siguiente combinación de comandos:
+
+```
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+```
+
+7 - 
+```
+sudo ps --no-headers -o comm 1
+```
+![image](https://user-images.githubusercontent.com/54609399/164113683-226fa6db-5a82-4398-9ed9-3479c24f0276.png)
+
+8 - 
+```
+sudo systemctl start mongod
+```
+![image](https://user-images.githubusercontent.com/54609399/164113964-f7690354-1c23-4018-ab22-75ae411c9a5a.png)
+
+9 - En caso que salga errir al iniciar podemos eejecutar el siguiente comando
+```
+sudo systemctl daemon-reload
+```
+10 - Para verificar que el servidor esta activo realizamos el siguiente comando
+```
+sudo systemctl status mongod
+```
+
+![image](https://user-images.githubusercontent.com/54609399/164114136-bc7f1ef2-3f70-4913-812e-83cca2624821.png)
+
+Con esto confirmamos que el server esta activo
+
+para reiniciar el servidor hacemos lo siguiente
+```
+sudo systemctl enable mongod
+```
+o
+```
+sudo systemctl restart mongod
+```
+
+11 - Para detener el servidor usamos el siguiente comando:
+```
+sudo systemctl stop mongod
+```
+```
+sudo systemctl status mongod
+```
+
+![image](https://user-images.githubusercontent.com/54609399/164114420-78bbfa80-1e1e-4092-970d-4566c57af9ee.png)
+
+12- Volvemos activar el servidor para instalar mongo compas (Estos son los comandos que se seguiran utilizando de ahora en adelante)
+```
+sudo systemctl start mongod
+```
+```
+sudo systemctl status mongod
+```
+
+13 - Para ejecutar el cliente de mongo abrimos una nueva pestaña ye ejcutamos el comando mongo
+```
+mongo
+```
+
+![image](https://user-images.githubusercontent.com/54609399/164114808-47f12a48-dabe-4f7c-a498-e8687a574c57.png)
+
+14 - 
+
+https://www.mongodb.com/try/download/compass
+
+![image](https://user-images.githubusercontent.com/54609399/164119108-c2589620-f4d0-4d68-bdb2-26bbad6433f4.png)
+
+
+15 - Una vez descargado ejecutamos el instalador
+
+![image](https://user-images.githubusercontent.com/54609399/164119307-cae36cfd-02f6-444a-94b5-9b8d242cf271.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119362-6d5c19b5-c6d2-4ffb-ab64-9b210b41f5ce.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119484-dfae66a1-a043-470f-b226-6ced099c5de0.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119613-647a6ede-48bb-42bf-8e97-5a7897c7c81e.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119705-5158285a-333e-4e3a-af40-0ffb2c97a86d.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119776-32ddc585-c29a-41c7-8b42-9508e91df55b.png)
+
+![image](https://user-images.githubusercontent.com/54609399/164119818-f3d64c3b-5366-493d-ba5d-c4ce05ea81aa.png)
+
+Con esto tenemos listo el MongoCompass con el MongoDB
+
+
 
 
 
