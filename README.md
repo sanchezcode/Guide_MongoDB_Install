@@ -155,20 +155,19 @@ https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 
 ![image](https://user-images.githubusercontent.com/54609399/164111442-da9ba0c8-fa7c-4e42-872f-f672c8b939bc.png)
 
-3 - Copiamos la siguiente linea de código
+3 - Podemos seguir toda la documentación, pero aqui te hare un resumen para ahorrar tiempo.
 
-![image](https://user-images.githubusercontent.com/54609399/164111602-f92eb648-56c6-4ad9-9d4b-afae44bdadf1.png)
+Iniciamos con el primer comando
 
 ```
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
 ```
 
-![image](https://user-images.githubusercontent.com/54609399/164111916-a668dca1-0b70-4f84-b12c-81379874195b.png)
+![image](https://user-images.githubusercontent.com/54609399/167243871-ec2eddca-7de6-4261-9bbd-d0838ffae117.png)
 
-Ejecutamos el siguiente comando con ENTER y esperamos un OK
+Al ejecutar el comando recibiremos un OK
 
-![image](https://user-images.githubusercontent.com/54609399/164112517-5eb7bfe4-fee1-48d1-ad7d-51e365d70b87.png)
-
+![image](https://user-images.githubusercontent.com/54609399/167243910-3a0a3437-b286-4a7f-b040-2c601ef9fe67.png)
 
 4 - Ejecutamos los siguientes comandos:
 
@@ -178,26 +177,28 @@ sudo apt-get install gnupg
 ```
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
 ```
-![image](https://user-images.githubusercontent.com/54609399/164112431-d60ba669-bec2-48b7-8c04-f260c642400d.png)
+
+![image](https://user-images.githubusercontent.com/54609399/167243970-6efb6ccf-0339-44b5-8d61-6a9a842f6238.png)
 
 5 - Realizamos el siguiente comando y luego hacemos un update para recargar todos los paquetes de MongoDb instalados hasta el momento
 
 ```
 sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 ```
-![image](https://user-images.githubusercontent.com/54609399/164112957-666de04a-6f2b-4578-81da-f890b490228c.png)
-
 ```
 sudo apt-get update
 ```
+
+![image](https://user-images.githubusercontent.com/54609399/167244111-d6cbf72b-1d8a-4699-af4d-4d27b4a0cb40.png)
 
 6 - Ahora vamos a instalar la ultima versión actual de MongoDB
 
 ```
 sudo apt-get install -y mongodb-org
 ```
+![image](https://user-images.githubusercontent.com/54609399/167244187-549f1b6f-05af-409d-af9a-eaf7801748f5.png)
 
-Al terminar ejecutamos la siguiente combinación de comandos:
+Al terminar ejecutamos la siguiente combinación de comandos y damos ENTER:
 
 ```
 echo "mongodb-org hold" | sudo dpkg --set-selections
@@ -208,30 +209,41 @@ echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
 
-7 - 
+![image](https://user-images.githubusercontent.com/54609399/167244238-8c8223eb-3247-4f08-a0d7-2c398402279d.png)
+
+7 - Instalamos el medio por el que se ejecutara mongo en Linux llamado systemd
+
 ```
 sudo ps --no-headers -o comm 1
 ```
-![image](https://user-images.githubusercontent.com/54609399/164113683-226fa6db-5a82-4398-9ed9-3479c24f0276.png)
 
-8 - 
+![image](https://user-images.githubusercontent.com/54609399/167244274-30a224a6-a042-4d30-91dc-d8b1e3a38088.png)
+
+8 - Con este comando inicializamos el servidor de mongo en Linux
+
 ```
 sudo systemctl start mongod
 ```
-![image](https://user-images.githubusercontent.com/54609399/164113964-f7690354-1c23-4018-ab22-75ae411c9a5a.png)
+Si todo sale bien veremos lo siguiente al dar ENTER
 
-9 - En caso que salga errir al iniciar podemos eejecutar el siguiente comando
+![image](https://user-images.githubusercontent.com/54609399/167244321-66085fbe-74b5-4d19-815c-58ccdc1e94a2.png)
+
+NOTA: En caso que salga error al iniciar podemos ejecutar el siguiente comando para reiniciar el systemd (que ejecuta el servidor de Mongo)
+
 ```
 sudo systemctl daemon-reload
 ```
-10 - Para verificar que el servidor esta activo realizamos el siguiente comando
+
+9 - Para verificar que el servidor esta activo realizamos el siguiente comando
+
 ```
 sudo systemctl status mongod
 ```
+Podemos ver que el servidor de MongoDB se esta ejecutando en nuestro sistema
 
-![image](https://user-images.githubusercontent.com/54609399/164114136-bc7f1ef2-3f70-4913-812e-83cca2624821.png)
+![image](https://user-images.githubusercontent.com/54609399/167244478-582c354c-49db-4922-bba1-b446a951e768.png)
 
-Con esto confirmamos que el server esta activo
+
 
 para reiniciar el servidor hacemos lo siguiente
 ```
