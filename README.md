@@ -1,5 +1,15 @@
 # Guide_MongoDB_Install
 
+Contenido:
+
+- INSTALACIÓN DE MONGODB Y COMPASS EN WINDOWS (10 y 11)
+- INSTALACIÓN DE MONGODB Y COMPASS EN LINUX (UBUNTU 20.04.4 LTS y 22.04 LTS)
+
+______________________________________________
+
+**** INSTALACIÓN DE MONGODB Y COMPASS EN WINDOWS (10 y 11) ****
+______________________________________________
+
 1 - Vamos a su pagina oficial https://www.mongodb.com/try/download/community
 
 2 - Descargamos la version que nos recomienda para nuestro sistema operativo que sale por defecto
@@ -132,9 +142,12 @@ y colocando mongo --version
 
 ![image](https://user-images.githubusercontent.com/54609399/137848080-ede1ca18-684c-42d5-9339-3ceb0347dc39.png)
 
-**** Linux Install****
+______________________________________________
 
-1 - Entramos a la pagina guía de instalación de MongoDB
+**** INSTALACIÓN DE MONGODB Y COMPASS EN LINUX (UBUNTU 20.04.4 LTS y 22.04 LTS) ****
+______________________________________________
+
+1 - Entramos a la pagina guía de instalación de MongoDB:
 
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 
