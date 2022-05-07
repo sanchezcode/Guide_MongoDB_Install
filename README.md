@@ -243,28 +243,32 @@ Podemos ver que el servidor de MongoDB se esta ejecutando en nuestro sistema
 
 ![image](https://user-images.githubusercontent.com/54609399/167244478-582c354c-49db-4922-bba1-b446a951e768.png)
 
+NOTA: Para reiniciar el servidor tenemos cualquiera de estos dos comandos:
 
-
-para reiniciar el servidor hacemos lo siguiente
 ```
 sudo systemctl enable mongod
 ```
-o
+o (recomendado)
 ```
 sudo systemctl restart mongod
 ```
 
-11 - Para detener el servidor usamos el siguiente comando:
+10 - Cuando necesitemos detener el servidor usamos el siguiente comando:
+
 ```
 sudo systemctl stop mongod
 ```
+
+y verificamos con
+
 ```
 sudo systemctl status mongod
 ```
 
-![image](https://user-images.githubusercontent.com/54609399/164114420-78bbfa80-1e1e-4092-970d-4566c57af9ee.png)
+![image](https://user-images.githubusercontent.com/54609399/167244967-4b7397a6-2d7f-401c-a0ce-a5431fb23ca4.png)
 
-12- Volvemos activar el servidor para instalar mongo compas (Estos son los comandos que se seguiran utilizando de ahora en adelante)
+11 - Para el siguiente paso necesitamos que el servidor este activo para probar Mongo Compass al instalarlo y el cliente por consola de MongoDB (Estos son los comandos que se seguiran utilizando de ahora en adelante cada que necesitemos usar MongoDB)
+
 ```
 sudo systemctl start mongod
 ```
@@ -272,39 +276,84 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 ```
 
-13 - Para ejecutar el cliente de mongo abrimos una nueva pestaña ye ejcutamos el comando mongo
+![image](https://user-images.githubusercontent.com/54609399/167245068-8cba2149-f3ad-4df6-9a6d-8464cfed862e.png)
+
+
+12 - Para ejecutar el cliente de MongoDB el servidor debe estar activo y en una nueva pestaña o en la misma ejecutamos el siguiente comando:
+
 ```
 mongo
 ```
 
-![image](https://user-images.githubusercontent.com/54609399/164114808-47f12a48-dabe-4f7c-a498-e8687a574c57.png)
+![image](https://user-images.githubusercontent.com/54609399/167245244-1eb93e30-d9e4-4e94-ae12-cb43b739b703.png)
 
-14 - 
+13 - Aqui podemos probar y ejecutar codigo de MongoDB para manipular nuestras bases de datos.
+
+![image](https://user-images.githubusercontent.com/54609399/167245308-73c33fb7-0999-4560-86b1-b9557ae86544.png)
+
+Ejemplo: Ver las bases de datos actuales
+
+```
+show dbs
+```
+
+![image](https://user-images.githubusercontent.com/54609399/167245369-b5e2f3ef-dde5-4082-8ac1-c7a838db8f20.png)
+
+14 - Iniciaremos con la instalacion de Mongo Compass el cual nos permitira ver y trabajar con nuestras bases de datos con una interfaz grafica.
+
+Ingresamos a la pagina de descarga de Mongo Compass
 
 https://www.mongodb.com/try/download/compass
 
-![image](https://user-images.githubusercontent.com/54609399/164119108-c2589620-f4d0-4d68-bdb2-26bbad6433f4.png)
+Automaticamente nos ubicara en la version mas estable y .deb (no cambiar ninguna de estas opciones)
 
+![image](https://user-images.githubusercontent.com/54609399/167245489-42700c74-e3f8-4092-a8e8-4e9be90495cb.png)
 
 15 - Una vez descargado ejecutamos el instalador
 
-![image](https://user-images.githubusercontent.com/54609399/164119307-cae36cfd-02f6-444a-94b5-9b8d242cf271.png)
+![image](https://user-images.githubusercontent.com/54609399/167245574-3f233b1f-d83d-4a9e-b150-68f1263180f1.png)
 
-![image](https://user-images.githubusercontent.com/54609399/164119362-6d5c19b5-c6d2-4ffb-ab64-9b210b41f5ce.png)
+16 - Instalamos el Mongo Compass
 
-![image](https://user-images.githubusercontent.com/54609399/164119484-dfae66a1-a043-470f-b226-6ced099c5de0.png)
+![image](https://user-images.githubusercontent.com/54609399/167245611-0be57626-15dd-4d3f-951c-b3a8312f860e.png)
 
-![image](https://user-images.githubusercontent.com/54609399/164119613-647a6ede-48bb-42bf-8e97-5a7897c7c81e.png)
+Verificamos que quedo instalado cuando veamos lo siguiente:
 
-![image](https://user-images.githubusercontent.com/54609399/164119705-5158285a-333e-4e3a-af40-0ffb2c97a86d.png)
+![image](https://user-images.githubusercontent.com/54609399/167245632-47766534-a741-495c-b293-baa056e160bb.png)
 
-![image](https://user-images.githubusercontent.com/54609399/164119776-32ddc585-c29a-41c7-8b42-9508e91df55b.png)
+17 - Vamos a buscar la aplicacion de Mongo Compass en nuestro inicio
 
-![image](https://user-images.githubusercontent.com/54609399/164119818-f3d64c3b-5366-493d-ba5d-c4ce05ea81aa.png)
+![image](https://user-images.githubusercontent.com/54609399/167245682-6962b128-7ed4-490b-8755-ecfc6bb0d6e3.png)
 
-Con esto tenemos listo el MongoCompass con el MongoDB
+![image](https://user-images.githubusercontent.com/54609399/167245714-391872d8-f82a-4361-876b-dabd71ead490.png)
 
+18 - Abrimos la aplicación y realizamos los siguientes pasos iniciales:
 
+Damos Next hasta el final
+
+![image](https://user-images.githubusercontent.com/54609399/167245762-f018e0c2-caf5-45eb-bac0-17162c4111f0.png)
+
+Presionamos el boton Get Started
+
+![image](https://user-images.githubusercontent.com/54609399/167245798-66fb6b59-e03e-4709-a9e5-66b8f48f3153.png)
+
+Dejamos todos los checks seleccionados y damos en Start Using Compass
+
+![image](https://user-images.githubusercontent.com/54609399/167245819-06642247-d5c8-44c5-ac28-de33f065cb60.png)
+
+Estamos listos para iniciar con Mongo Compass
+
+![image](https://user-images.githubusercontent.com/54609399/167245853-5a4127d5-01db-4a99-9387-06af85507d89.png)
+
+Al dar en Connect podemos ver las bases de datos iniciales
+
+![image](https://user-images.githubusercontent.com/54609399/167245873-a1aad96e-a73f-4af8-9ed9-9327b5926514.png)
+
+Recordemos que para que Mongo Compass funcione debe estar ejecutandose el servidor de MongoDB
+
+![image](https://user-images.githubusercontent.com/54609399/167245911-b5dab0e3-25df-4f1a-92ad-167174721225.png)
+
+Y con todos estos pasos completados ya podemos iniciar a trabajar con estas herramientas.
 
 
 
